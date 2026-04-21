@@ -1,0 +1,9 @@
+title: "Der Mittwoch-Kurier"
+description: "AH-Training des VfB Neckarrems, Hummelberg"
+
+# Projekt-URL auf GitHub Pages
+url: "https://MDoubleYouOnGit.github.io"
+baseurl: "/mittwoch-kurier"
+
+permalink: pretty
+markdown: kramdown
