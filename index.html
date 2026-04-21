@@ -649,7 +649,7 @@
       <h2>Weiß auf Kurs – ein Tor fehlt noch zum Ausgleich</h2>
       <p class="deck">Nach einem historischen Rückstand kämpft sich Team Weiß Woche für Woche heran. Der Ausgleich ist zum Greifen nah.</p>
       <div class="byline">
-        <span>Spieltag 10 · 22. April 2026</span>
+        <span>Spieltag 15 · 22. April 2026</span>
         <a class="read-more" onclick="event.stopPropagation(); openArticle('article-1')">Artikel lesen →</a>
       </div>
     </div>
@@ -781,7 +781,7 @@ const ARTICLES = [
   {
     id: "article-1",
     date: "22. April 2026",
-    spieltag: 10,
+    spieltag: 15,
     scoreWeis: 7,
     scoreRot: 8,
     title: "Weiß auf Kurs – ein Tor fehlt noch zum Ausgleich",
@@ -789,8 +789,13 @@ const ARTICLES = [
     kicker: "Saisonvorschau · AH-Training · Rot gegen Weiß",
     subheadline: "Nach einem historischen Rückstand kämpft sich Team Weiß Woche für Woche heran.<br>Der Ausgleich ist zum Greifen nah.",
     scoreHistory: [
+      { date: "8. Jan.", weis: 0, rot: 1, winner: "Rot", latest: false },
+      { date: "15. Jan.", weis: 0, rot: 2, winner: "Rot", latest: false },
+      { date: "21. Jan.", weis: 0, rot: 3, winner: "Rot", latest: false },
+      { date: "28. Jan.", weis: 0, rot: 4, winner: "Rot", latest: false },
       { date: "4. Feb.", weis: 1, rot: 4, winner: "Rot", latest: false },
-      { date: "11. Feb.", weis: 2, rot: 5, winner: "Rot", latest: false },
+      { date: "11. Feb.", weis: 2, rot: 4, winner: "Weiß", latest: false },
+      { date: "18. Feb.", weis: 2, rot: 5, winner: "Rot", latest: false },
       { date: "25. Feb.", weis: 2, rot: 6, winner: "Rot", latest: false },
       { date: "4. Mär.", weis: 2, rot: 7, winner: "Rot", latest: false },
       { date: "11. Mär.", weis: 3, rot: 7, winner: "Rot", latest: false },
@@ -802,8 +807,8 @@ const ARTICLES = [
     ],
     body: `
       <p>Jeden Mittwoch, Woche für Woche, treffen sich die Herren auf dem Hummelberg in Neckarrems. Keine große Bühne, kein Schiedsrichter, kein Protokoll. Nur zwei Tore, zwei Teams – Rot gegen Weiß – und eine Regel, die alles entscheidet: <em>„Das letzte Tor entscheidet."</em></p>
-      <p>Was zu Beginn des Jahres noch als lockeres Trainingsspiel gedacht war, hat sich bis heute zu einem veritablen Saisondrama entwickelt. Zehn Spieltage, neun Entscheidungen bereits gefallen – und der Abstand zwischen den Teams ist auf ein einziges Tor zusammengeschmolzen.</p>
-      <p>Dabei sah es lange Zeit gar nicht danach aus. Rot startete die Saison wie eine Walze: vier Siege in Folge, dann fünf, sechs, sieben. Weiß schien chancenlos. Doch ab März drehte sich das Momentum. Spieltag für Spieltag holte das weiße Team auf – und nun steht es 7:8.</p>
+      <p>Was zu Beginn des Jahres noch als lockeres Trainingsspiel gedacht war, hat sich bis heute zu einem veritablen Saisondrama entwickelt. Fünfzehn Entscheidungen sind bereits gefallen – und der Abstand zwischen den Teams ist auf ein einziges Tor zusammengeschmolzen.</p>
+      <p>Dabei sah es lange Zeit gar nicht danach aus. Schon im Januar setzte Rot die ersten vier Nadelstiche (08., 15., 21. und 28. Januar) und zog auf 0:4 davon. Weiß schien chancenlos. Doch ab März drehte sich das Momentum. Spieltag für Spieltag holte das weiße Team auf – und nun steht es 7:8.</p>
     `,
     body2: `
       <p>Das Schöne an diesem Format: Es gibt keine Taktik gegen das letzte Tor. Man kann dominieren und verlieren, weil in der entscheidenden Situation der Ball noch einmal im falschen Netz landet. Diese Unberechenbarkeit macht das Duell auf dem Hummelberg zu etwas Besonderem – und sorgt dafür, dass niemand wirklich abschalten kann. Es gibt keinen Abpfiff, der das Spiel beendet. Das letzte Tor beendet alles – und das kann jederzeit fallen.</p>
