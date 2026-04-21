@@ -550,21 +550,21 @@
     <span class="label">Saisonstand 2026</span>
     <div class="score-display">
       <span class="team">⬜ Weiß</span>
-      <span class="big-score">7 : 8</span>
+      <span class="big-score">8 : 8</span>
       <span class="team rot">Rot 🟥</span>
     </div>
-    <span class="label">Stand: 15. April</span>
+    <span class="label">Stand: 22. April</span>
   </div>
 
   <!-- FEATURED ARTICLE -->
   <div id="aktuell">
-    <div class="featured" onclick="openArticle('article-1')">
+    <div class="featured" onclick="openArticle('article-2')">
       <div class="featured-badge">⚡ Neueste Ausgabe</div>
-      <h2>Weiß auf Kurs – ein Tor fehlt noch zum Ausgleich</h2>
-      <p class="deck">Nach einem historischen Rückstand kämpft sich Team Weiß Woche für Woche heran. Der Ausgleich ist zum Greifen nah.</p>
+      <h2>Gleichstand! Weiß holt nach 15 Wochen den Ausgleich</h2>
+      <p class="deck">Ein historischer Moment auf dem Hummelberg: Team Weiß gleicht nach langer Aufholjagd auf 8:8 aus – die Saison ist wieder vollkommen offen.</p>
       <div class="byline">
-        <span>Spieltag 15 · 22. April 2026</span>
-        <a class="read-more" onclick="event.stopPropagation(); openArticle('article-1')">Artikel lesen →</a>
+        <span>Spieltag 16 · 29. April 2026</span>
+        <a class="read-more" onclick="event.stopPropagation(); openArticle('article-2')">Artikel lesen →</a>
       </div>
     </div>
   </div>
@@ -597,6 +597,45 @@
 // ARTIKEL-DATENBANK – hier neue Artikel einfügen
 // ═══════════════════════════════════════════════
 const ARTICLES = [
+  {
+    id: "article-2",
+    date: "29. April 2026",
+    spieltag: 16,
+    scoreWeis: 8,
+    scoreRot: 8,
+    title: "Gleichstand! Weiß holt nach 15 Wochen den Ausgleich",
+    deck: "Ein historischer Moment auf dem Hummelberg: Team Weiß gleicht nach langer Aufholjagd auf 8:8 aus – die Saison ist wieder vollkommen offen.",
+    kicker: "Saisonwende · AH-Training · Rot gegen Weiß",
+    subheadline: "Ein historischer Moment auf dem Hummelberg: Team Weiß gleicht nach langer Aufholjagd auf 8:8 aus.<br>Die Saison ist wieder vollkommen offen.",
+    scoreHistory: [
+      { date: "8. Jan.", weis: 0, rot: 1, winner: "Rot", latest: false },
+      { date: "15. Jan.", weis: 0, rot: 2, winner: "Rot", latest: false },
+      { date: "21. Jan.", weis: 0, rot: 3, winner: "Rot", latest: false },
+      { date: "28. Jan.", weis: 0, rot: 4, winner: "Rot", latest: false },
+      { date: "4. Feb.", weis: 1, rot: 4, winner: "Rot", latest: false },
+      { date: "11. Feb.", weis: 2, rot: 4, winner: "Weiß", latest: false },
+      { date: "18. Feb.", weis: 2, rot: 5, winner: "Rot", latest: false },
+      { date: "25. Feb.", weis: 2, rot: 6, winner: "Rot", latest: false },
+      { date: "4. Mär.", weis: 2, rot: 7, winner: "Rot", latest: false },
+      { date: "11. Mär.", weis: 3, rot: 7, winner: "Rot", latest: false },
+      { date: "18. Mär.", weis: 4, rot: 7, winner: "Rot", latest: false },
+      { date: "25. Mär.", weis: 5, rot: 7, winner: "Rot", latest: false },
+      { date: "1. Apr.", weis: 6, rot: 7, winner: "Rot", latest: false },
+      { date: "8. Apr.", weis: 6, rot: 8, winner: "Rot", latest: false },
+      { date: "15. Apr.", weis: 7, rot: 8, winner: "Weiß", latest: false },
+      { date: "22. Apr.", weis: 8, rot: 8, winner: "⬅ Ausgleich!", latest: true },
+    ],
+    body: `
+      <p>Es war der Moment, auf den Team Weiß seit fast vier Monaten gewartet hat. In der 22. Spielminute fiel das entscheidende letzte Tor – und diesmal ins rote Netz. Stille auf dem Hummelberg. Dann Jubel. 8:8. Gleichstand. Endlich.</p>
+      <p>Die Aufholjagd hatte im Februar begonnen, als Weiß nach einem 0:4-Rückstand seinen ersten Saisonsieg einfuhr. Woche für Woche, Tor für Tor, kämpfte sich das weiße Team heran. Es dauerte sechzehn Spieltage, bis der Rückstand aufgeholt war – doch jetzt ist es vollbracht.</p>
+      <p>Spieler aus beiden Teams sprachen danach von einem besonderen Abend. „Sowas passiert einmal in einer Saison", sagte ein Weißer nach dem Spiel. „Wir haben nie aufgehört zu glauben." Auf der Rotseite herrschte nachdenkliche Stille, aber auch Respekt. Verdient ist verdient.</p>
+    `,
+    body2: `
+      <p>Das Regelformat – das letzte Tor entscheidet – hat diesen Abend erst möglich gemacht. Kein klassischer Schlusspfiff, kein Abpfiff nach 90 Minuten, sondern das Tor selbst als Endpunkt. Wer zuletzt trifft, gewinnt. Und wer sich das Recht auf das letzte Wort erkämpft, schreibt Geschichte.</p>
+      <p>Die nächste Mittwochsession beginnt bei 8:8 – ein leeres Blatt. Zum ersten Mal in dieser Saison hat kein Team einen Vorteil. Der Kampf geht weiter, Tor für Tor, Mittwoch für Mittwoch. Hummelberg wartet.</p>
+    `,
+    grill: false,
+  },
   {
     id: "article-1",
     date: "22. April 2026",
