@@ -550,23 +550,15 @@
     <span class="label">Saisonstand 2026</span>
     <div class="score-display">
       <span class="team">⬜ Weiß</span>
-      <span class="big-score">8 : 8</span>
+      <span class="big-score">9 : 8</span>
       <span class="team rot">Rot 🟥</span>
     </div>
-    <span class="label">Stand: 22. April</span>
+    <span class="label">Stand: 29. April</span>
   </div>
 
   <!-- FEATURED ARTICLE -->
   <div id="aktuell">
-    <div class="featured" onclick="openArticle('article-2')">
-      <div class="featured-badge">⚡ Neueste Ausgabe</div>
-      <h2>Gleichstand! Weiß holt nach 15 Wochen den Ausgleich.</h2>
-      <p class="deck">Ein historischer Moment auf dem Hummelberg: Team Weiß gleicht nach langer Aufholjagd auf 8:8 aus – die Saison ist wieder vollkommen offen.</p>
-      <div class="byline">
-        <span>Spieltag 16 · 22. April 2026</span>
-        <a class="read-more" onclick="event.stopPropagation(); openArticle('article-2')">Artikel lesen →</a>
-      </div>
-    </div>
+    <div id="featured-article"></div>
   </div>
 
   <!-- ARCHIVE -->
@@ -597,6 +589,48 @@
 // ARTIKEL-DATENBANK – hier neue Artikel einfügen
 // ═══════════════════════════════════════════════
 const ARTICLES = [
+  {
+    id: "article-3",
+    date: "29. April 2026",
+    spieltag: 17,
+    scoreWeis: 9,
+    scoreRot: 8,
+    title: "Spielbericht: Weiß triumphiert – und Fröschi macht’s perfekt!",
+    deck: "Ein Spieltag der leisen Töne… zumindest am Anfang. Am Ende aber: Fröschi unsterblich, Weiß siegt!",
+    kicker: "Fröschi trifft zum Sieg · Schunki taucht ab · 17. Spieltag",
+    subheadline: "Die Partie startet zäh wie ein Montagmorgen, doch am Ende sorgt Fröschi für den großen Moment. Schunki liefert die Show am Boden.",
+    scoreHistory: [
+      { date: "8. Jan.", weis: 0, rot: 1, winner: "Rot", latest: false },
+      { date: "15. Jan.", weis: 0, rot: 2, winner: "Rot", latest: false },
+      { date: "21. Jan.", weis: 0, rot: 3, winner: "Rot", latest: false },
+      { date: "28. Jan.", weis: 0, rot: 4, winner: "Rot", latest: false },
+      { date: "4. Feb.", weis: 1, rot: 4, winner: "Rot", latest: false },
+      { date: "11. Feb.", weis: 2, rot: 4, winner: "Weiß", latest: false },
+      { date: "18. Feb.", weis: 2, rot: 5, winner: "Rot", latest: false },
+      { date: "25. Feb.", weis: 2, rot: 6, winner: "Rot", latest: false },
+      { date: "4. Mär.", weis: 2, rot: 7, winner: "Rot", latest: false },
+      { date: "11. Mär.", weis: 3, rot: 7, winner: "Rot", latest: false },
+      { date: "18. Mär.", weis: 4, rot: 7, winner: "Rot", latest: false },
+      { date: "25. Mär.", weis: 5, rot: 7, winner: "Rot", latest: false },
+      { date: "1. Apr.", weis: 6, rot: 7, winner: "Rot", latest: false },
+      { date: "8. Apr.", weis: 6, rot: 8, winner: "Rot", latest: false },
+      { date: "15. Apr.", weis: 7, rot: 8, winner: "Rot", latest: false },
+      { date: "22. Apr.", weis: 8, rot: 8, winner: "Unentschieden", latest: false },
+      { date: "29. Apr.", weis: 9, rot: 8, winner: "Weiß 🐸", latest: true }
+    ],
+    body: `
+      <p>Was war das heute? Hatte jemand die Lautstärke runtergedreht? Zu Beginn der Partie schlich sich eine ungewohnte Stille über das Spielfeld – weniger Tempo, weniger Lärm, weniger von allem. Kenner der Szene rieben sich die Augen: Sind das wirklich dieselben Leute wie letzte Woche? Die Antwort lautet: Ja. Aber irgendwer hat wohl das Koffein vergessen.</p>
+      <p>Doch keine Sorge – das Niveau des kontrollierten Chaos, das wir alle so lieben, ließ nicht ewig auf sich warten.</p>
+      <p><strong>Schunki & die Kunst des eleganten Abtauchens</strong><br>Gegen Ende der Partie fand sich Schunki wieder in seinem natürlichen Element: dem Dive. Was zunächst wie ein harmloses Zweikampfergebnis aussah, entpuppte sich als die theatralischste Bodennummer des Abends. Ob Oscar-würdig oder nicht – die Jury ist gespalten. Der Aufwand jedenfalls: beeindruckend. Die Notwendigkeit: diskutabel.</p>
+    `,
+    body2: `
+      <p> <strong>Highlight des Tages: Fröschi trifft zum Sieg!</strong><br>Und dann war es so weit. Die Partie näherte sich ihrem Höhepunkt – und dann kam Fröschi. Mit dem finalen Treffer schrieb er sein eigenes kleines Kapitel dieses Spiels – eiskalt, im richtigen Moment, unaufhaltsam. </p>
+      <p>Was für eine Entstehungsgeschichte des Tores das war – ob artistisch, glücklich oder genial – spielt keine Rolle. Zählt nur, dass es drin war. Und drin ist drin. Der Jubel war entsprechend episch, die Bescheidenheit von Fröschi vermutlich… ausbaufähig. Völlig zurecht.</p>
+      <p><strong>Fazit: Weiß triumphiert, Fröschi vollendet.</strong><br>Ein verdienter Erfolg für Weiß, angeführt von einem Mann für die entscheidenden Momente. Schunki lieferte die Dramatik, Fröschi den finalen Akt.</p>
+      <p style="font-size:0.9em;color:#888;">Bis zum nächsten Spieltag.
+    `,
+    grill: false,
+  },
   {
     id: "article-2",
     date: "22. April 2026",
@@ -840,7 +874,24 @@ function handleOverlayClick(e) {
 
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeArticle(); });
 
+function renderFeatured() {
+  const a = ARTICLES[0];
+  const featured = document.getElementById('featured-article');
+  featured.innerHTML = `
+    <div class="featured" onclick="openArticle('${a.id}')">
+      <div class="featured-badge">⚡ Neueste Ausgabe</div>
+      <h2>${a.title}</h2>
+      <p class="deck">${a.deck}</p>
+      <div class="byline">
+        <span>Spieltag ${a.spieltag} · ${a.date}</span>
+        <a class="read-more" onclick="event.stopPropagation(); openArticle('${a.id}')">Artikel lesen →</a>
+      </div>
+    </div>
+  `;
+}
+
 // Init
+renderFeatured();
 renderArchive();
 </script>
 </body>
