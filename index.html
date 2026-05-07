@@ -550,10 +550,10 @@
     <span class="label">Saisonstand 2026</span>
     <div class="score-display">
       <span class="team">⬜ Weiß</span>
-      <span class="big-score">9 : 8</span>
+      <span class="big-score">9 : 9</span>
       <span class="team rot">Rot 🟥</span>
     </div>
-    <span class="label">Stand: 29. April</span>
+    <span class="label">Stand: 6. Mai</span>
   </div>
 
   <!-- FEATURED ARTICLE -->
@@ -589,6 +589,48 @@
 // ARTIKEL-DATENBANK – hier neue Artikel einfügen
 // ═══════════════════════════════════════════════
 const ARTICLES = [
+  {
+    id: "article-4",
+    date: "6. Mai 2026",
+    spieltag: 18,
+    scoreWeis: 9,
+    scoreRot: 9,
+    title: "Roter Gegenschlag: Das Duell kippt wieder auf 9:9",
+    deck: "Team Rot schlägt zurück, gleicht die Saison aus und macht aus dem Mittwochabend endgültig eine Mischung aus Sport, Drama und Kabarett.",
+    kicker: "Ausgleich wiederhergestellt · Rot kontert · 18. Spieltag",
+    subheadline: "Kein Team schenkt dem anderen einen Zentimeter. Nach dem nächsten Wendepunkt steht es wieder völlig absurd ausgeglichen: 9:9.",
+    scoreHistory: [
+      { date: "8. Jan.", weis: 0, rot: 1, winner: "Rot", latest: false },
+      { date: "15. Jan.", weis: 0, rot: 2, winner: "Rot", latest: false },
+      { date: "21. Jan.", weis: 0, rot: 3, winner: "Rot", latest: false },
+      { date: "28. Jan.", weis: 0, rot: 4, winner: "Rot", latest: false },
+      { date: "4. Feb.", weis: 1, rot: 4, winner: "Rot", latest: false },
+      { date: "11. Feb.", weis: 2, rot: 4, winner: "Weiß", latest: false },
+      { date: "18. Feb.", weis: 2, rot: 5, winner: "Rot", latest: false },
+      { date: "25. Feb.", weis: 2, rot: 6, winner: "Rot", latest: false },
+      { date: "4. Mär.", weis: 2, rot: 7, winner: "Rot", latest: false },
+      { date: "11. Mär.", weis: 3, rot: 7, winner: "Rot", latest: false },
+      { date: "18. Mär.", weis: 4, rot: 7, winner: "Rot", latest: false },
+      { date: "25. Mär.", weis: 5, rot: 7, winner: "Rot", latest: false },
+      { date: "1. Apr.", weis: 6, rot: 7, winner: "Rot", latest: false },
+      { date: "8. Apr.", weis: 6, rot: 8, winner: "Rot", latest: false },
+      { date: "15. Apr.", weis: 7, rot: 8, winner: "Rot", latest: false },
+      { date: "22. Apr.", weis: 8, rot: 8, winner: "Unentschieden", latest: false },
+      { date: "29. Apr.", weis: 9, rot: 8, winner: "Weiß 🐸", latest: false },
+      { date: "6. Mai", weis: 9, rot: 9, winner: "Rot", latest: true }
+    ],
+    body: `
+      <p>Der Hummelberg hat den nächsten Plot-Twist geliefert. Nachdem Weiß zuletzt den Vorsprung geschnappt hatte, kam nun die rote Antwort mit der Wucht einer schlecht gelaunten Abrissbirne: Sieg für Rot, Serie wieder auf Null, Anzeigetafel zurück im Gleichgewicht.</p>
+      <p>Was nach einem normalen Trainingsabend klang, entwickelte sich in Rekordzeit zu einer Mischung aus Endspiel, Nervenprobe und gepflegtem Mittwochswahnsinn. Jeder Ballgewinn wurde gefeiert wie ein Pokalsieg, jeder Fehlpass kommentiert wie ein Staatsereignis.</p>
+      <p><strong>Ergebnis mit Ansage: Drama pur</strong><br>Rot spielte mit genau der Sorte Entschlossenheit, die man sonst nur bei den letzten zwei Stücken vom Grill erlebt. Keine Geschenke, keine Pausen, kein Mitleid. Und genau damit war der Boden bereitet für das, was am Ende zählen sollte: der entscheidende Punch zum Ausgleich in der Gesamtwertung.</p>
+    `,
+    body2: `
+      <p><strong>9:9 - und wieder von vorne.</strong><br>Mehr Gleichgewicht geht kaum. Die Saison ist erneut komplett offen, die Nerven sind weiterhin dünn und die nächste Ausgabe dieses Dauerkrachers wirft bereits ihren Schatten voraus.</p>
+      <p>Dieses Duell ist inzwischen weit mehr als ein Trainingsspiel. Es ist ein fortlaufendes Theaterstück mit Fußballschuhen: erst dominiert die eine Seite, dann schlägt die andere zurück, und am Ende steht da wieder diese Zahl, die gleichzeitig beruhigt und verrückt macht: 9:9.</p>
+      <p>Wenn das so weitergeht, braucht der Mittwoch bald Flutlicht, Einlaufmusik und einen eigenen Liveticker. Bis dahin bleibt alles beim Alten: Das letzte Tor entscheidet - und macht aus jedem Abend eine neue Schlagzeile.</p>
+    `,
+    grill: false,
+  },
   {
     id: "article-3",
     date: "29. April 2026",
